@@ -24,7 +24,7 @@ node nodejs/client.js
 ### Setup
 ```sh
 pip install -r requirements.txt
-python -m grpc.tools.protoc -I=. --python_out=. --grpc_python_out=./python sample.proto
+python -m grpc.tools.protoc -I=. --python_out=./python --grpc_python_out=./python sample.proto
 ```
 
 ### Server
