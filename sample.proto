@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message Candidate {
+  enum Rate {
+    GOOD = 0;
+    OK = 1;
+    BAD = 2;
+  }
+
+  string name = 1;
+  Rate rate = 2;
+}
+
+message CandidateRequest {
+  string requester = 1;
+}
+
+message CandidateResponse {
+  string memo = 1;
+  repeated Candidate candidates = 2;
+}
+
+service SearchService {
+  rpc Search (CandidateRequest) returns (CandidateResponse);
+}
