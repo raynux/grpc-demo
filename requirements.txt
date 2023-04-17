@@ -4,13 +4,17 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-enum34==1.1.6             # via grpcio
-futures==3.0.5            # via grpcio
+enum34==1.1.6
+    # via grpcio
+futures==3.0.5
+    # via grpcio
+grpcio==1.0.0
+    # via grpcio-tools
 grpcio-tools==1.0.0
-grpcio==1.0.0             # via grpcio-tools
-protobuf==3.0.0           # via grpcio, grpcio-tools
-six==1.10.0               # via grpcio, protobuf
-
-# The following packages are commented out because they are
-# considered to be unsafe in a requirements file:
-# setuptools                # via protobuf
+    # via -r requirements.in
+protobuf==3.18.3
+    # via
+    #   grpcio
+    #   grpcio-tools
+six==1.10.0
+    # via grpcio
